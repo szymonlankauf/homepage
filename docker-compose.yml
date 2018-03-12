@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    image: php:7
+    command: php -S 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
+    environment:
+      - ROOT_URL=https://simonlankauf.pl
+      - VIRTUAL_HOST=simonlankauf.pl,www.simonlankauf.pl
+      - LETSENCRYPT_HOST=simonlankauf.pl,www.simonlankauf.pl
+      - LETSENCRYPT_EMAIL=tesla369@gmail.com
+      - VIRTUAL_PORT=8000
+
+networks:
+  default:
+   external:
+     name: ${NETWORK}
