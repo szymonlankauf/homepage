@@ -17,7 +17,7 @@ jobs:
       - checkout
 
       # install OS dependencies
-      - run: apk update && apk upgrade && apk add --no-cache bash git openssh sshpass
+      - run: apk update && apk upgrade && apk add --no-cache bash git openssh sshpass rsync
 
       # deploy the build (if on a deployment branch)
       - add_ssh_keys:
