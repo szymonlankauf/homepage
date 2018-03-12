@@ -16,9 +16,7 @@ ls
 #    docker-compose up -d --build
 #EOF
 
-#    else
-#        ssh ${SSH_USER_PROD}@${SSH_IP_PROD} "echo 'NOT IMPLEMENTED YET!'"
-    fi
+
 
 
 
