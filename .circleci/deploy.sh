@@ -4,20 +4,17 @@ if [[ "$CIRCLE_BRANCH" == "master" ]]; then
 
     set -e
 
-echo $SSH_USER;
-echo $SSH_IP;
+    echo $SSH_USER;
+    echo $SSH_IP;
 
-pwd
-ls
+    pwd
+    ls
 
-#sshpass -p $SSH_PASS ssh -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_IP} << EOF
-#    mkdir -p app; cd ~/app;
-#
-#    docker-compose up -d --build
-#EOF
+sshpass -p $SSH_PASS rsync -avz . $SSH_USER@$SSH_IP:/root/app
 
-
-
-
+sshpass -p $SSH_PASS ssh -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_IP} << EOF
+    cd ~/app;
+    docker-compose up -d --build
+EOF
 
 fi
