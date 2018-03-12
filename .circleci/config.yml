@@ -23,10 +23,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
               - "31:7b:75:15:9a:1d:09:2c:5d:7f:82:2c:38:0f:2e:d7"
-      - run:
-          name: Fix host authenticity for $SSH_IP
-          command: |
-            ssh-keyscan $SSH_IP_TEST >> ~/.ssh/known_hosts
       - deploy:
           name: Docker Image Deploment
           command: .circleci/deploy.sh
