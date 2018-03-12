@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    image: php:7
+    command: php -S 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
+    environment:
+      - ROOT_URL=${ROOT_URL}
+      - VIRTUAL_HOST=${DOMAINS}
+      - LETSENCRYPT_HOST=${DOMAINS}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      - VIRTUAL_PORT=8000
+
+#networks:
+#  default:
+#   external:
+#     name: ${NETWORK}
