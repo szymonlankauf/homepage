@@ -10,13 +10,13 @@ services:
     working_dir: /app
     restart: unless-stopped
     environment:
-      - ROOT_URL=${ROOT_URL}
-      - VIRTUAL_HOST=${DOMAINS}
-      - LETSENCRYPT_HOST=${DOMAINS}
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+      - ROOT_URL=https://simonlankauf.pl
+      - VIRTUAL_HOST=simonlankauf.pl,www.simonlankauf.pl
+      - LETSENCRYPT_HOST=simonlankauf.pl,www.simonlankauf.pl
+      - LETSENCRYPT_EMAIL=tesla369@gmail.com
       - VIRTUAL_PORT=8000
 
-#networks:
-#  default:
-#   external:
-#     name: ${NETWORK}
+networks:
+  default:
+   external:
+     name: ${NETWORK}
