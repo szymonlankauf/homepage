@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     function handleError() {
-
+        document.querySelector('emailError').classList.remove('hidden')
     }
 
     function handleSuccess() {
-
+        document.querySelector('emailSent').classList.remove('hidden')
     }
 
     $("#contact-form").find("form").on("submit", function (e) {
@@ -15,7 +15,6 @@ $(document).ready(function () {
             url: this.action,
             data:  $( this ).serialize()
         });
-
 
         $.ajax({
             type: "POST",

@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 //Creating criteria of dispatch
     $data = array(
         "to" => array (
-            "gustaw.daniel@gmail.com" => ""
+            "tesla369@gmail.com" => ""
         ),
         'smtp_account' => $smtp,
         'subject' => 'From Homepage:: '.$_POST["subject"], //Will swap if var exsits
@@ -48,10 +48,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     echo $result;
 
 
-//    $res = mail('gustaw.daniel@gmail.com', 'Email from homepage '.$_POST["subject"], );
+//    $res = mail('tesla369@gmail.com', 'Email from homepage '.$_POST["subject"], );
 
 //    $r
-//    es = mail('gustaw.daniel@gmail.com', 'Email from homepage '.$_POST["subject"], $_POST["firstname"]."\n".$_POST["email"]."\n".$_POST["textmessage"]);
+//    es = mail('tesla369@gmail.com', 'Email from homepage '.$_POST["subject"], $_POST["firstname"]."\n".$_POST["email"]."\n".$_POST["textmessage"]);
 //    var_dump($res, $to);
 } else {
     http_response_code(405);
