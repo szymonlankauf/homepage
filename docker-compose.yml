@@ -19,7 +19,8 @@ services:
       - EMAIL_LABS_SECRET_KEY=${EMAIL_LABS_SECRET_KEY}
       - EMAIL_LABS_SMTP=${EMAIL_LABS_SMTP}
 
-#networks:
-#  default:
-#   external:
-#     name: ${NETWORK}
+
+networks:
+  default:
+   external:
+     name: webproxy

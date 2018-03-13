@@ -10,7 +10,7 @@ if [[ "$CIRCLE_BRANCH" == "master" ]]; then
     pwd
     ls
 
-sshpass -p $SSH_PASS rsync -avz . $SSH_USER@$SSH_IP:/root/app
+rsync -ratlz --rsh="/usr/bin/sshpass -p $SSH_PASS ssh -o StrictHostKeyChecking=no -l $SSH_USER" . $SSH_USER@$SSH_IP:/root/app
 
 sshpass -p $SSH_PASS ssh -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_IP} << EOF
     cd ~/app;
