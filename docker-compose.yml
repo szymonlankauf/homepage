@@ -15,6 +15,10 @@ services:
       - LETSENCRYPT_HOST=simonlankauf.pl,www.simonlankauf.pl
       - LETSENCRYPT_EMAIL=tesla369@gmail.com
       - VIRTUAL_PORT=8000
+      - EMAIL_LABS_APP_KEY=${EMAIL_LABS_APP_KEY}
+      - EMAIL_LABS_SECRET_KEY=${EMAIL_LABS_SECRET_KEY}
+      - EMAIL_LABS_SMTP=${EMAIL_LABS_SMTP}
+
 
 networks:
   default:
