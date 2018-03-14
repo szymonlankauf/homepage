@@ -52,3 +52,6 @@ sed -i 's/^NGINX_FILES_PATH=.*/NGINX_FILES_PATH=\/root\/nginx\/data/g' .env
 ./start.sh
 ```
 
+## Using docker compose locally
+
+    docker-compose -f docker-compose-local.yml up
