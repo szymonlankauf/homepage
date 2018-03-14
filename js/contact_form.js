@@ -1,27 +1,32 @@
 $(document).ready(function () {
 
     function handleError() {
-        document.querySelector('emailError').classList.remove('hidden')
+        document.querySelector('#emailError').classList.remove('hidden')
     }
 
     function handleSuccess() {
-        document.querySelector('emailSent').classList.remove('hidden')
+        document.querySelector('#emailSent').classList.remove('hidden')
     }
 
-    $("#contact-form").find("form").on("submit", function (e) {
+    var form = $("#contact-form").find("form");
+
+    form.find("input[type=submit]").removeAttr("disabled");
+
+    form.on("submit", function (e) {
         e.preventDefault();
 
-        console.log({
-            url: this.action,
-            data:  $( this ).serialize()
-        });
+        // console.log({
+        //     url: this.action,
+        //     data:  $( this ).serialize()
+        // });
 
         $.ajax({
             type: "POST",
             url: this.action,
-            data:  $( this ).serialize()
+            data:  $( this ).serialize(),
+            dataType: 'json'
         }).then(function (data) {
-            console.log(data);
+            // console.log(data);
 
             if(data.code !== 200) {
                 // console.log("error")

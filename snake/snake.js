@@ -32,9 +32,10 @@
         snakeTail[i-1]=snakeBody[i];
     }
 
-    document.addEventListener('keypress', function(event) {
+    document.addEventListener('keydown', function(event) {
 
        var keyName = event.key;
+       console.log(keyName);
        switch(keyName) {
            case 'ArrowRight':
                    oneDirection = "right";

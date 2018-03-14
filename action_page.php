@@ -1,7 +1,6 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
-    var_dump($_POST);
 
     if(!getenv("EMAIL_LABS_SECRET_KEY") || !getenv ( "EMAIL_LABS_SECRET_KEY" ) || !getenv ("EMAIL_LABS_SMTP")) {
         echo "Email Keys not defined"; die;
@@ -45,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
 //Download results
     $result = curl_exec($curl);
+    header('Content-Type: application/json');
     echo $result;
 
 

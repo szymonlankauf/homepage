@@ -1,3 +1,19 @@
 .navbar-shrink {
-    background-color: #999999;
+    background-color: dodgerblue;
+}
+
+.navbar-shrink-a {
+    color: #333333!important;
+}
+
+.navbar-shrink-a:hover {
+    color: #dddddd!important;
+}
+
+.navbar-icon {
+    background-color: #333333!important;
+}
+.nav-button-border {
+    border-color: #1c63b7!important;
+    background-color: #2996ff!important;
 }

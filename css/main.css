@@ -243,12 +243,12 @@ body {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: #777;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #333;
 }
 
 .navbar-default .nav > li>a,
@@ -261,12 +261,12 @@ body {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #222;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: #fff!important;
     background-color: transparent;
 }
 
@@ -325,6 +325,7 @@ body {
         color: #f05f40;
     }
 }
+
 
 .mainpicture {
     width: 100%;
@@ -400,12 +401,12 @@ body {
 }
 
 .button-message {
-    background-color: #828282;
+    background-color: #89d12a;
 }
 
 .buttn:hover {
     color:black;
-    background-color: #888888;
+    background-color: #9aea30;
 }
 
 .buttn-primary {
@@ -507,6 +508,7 @@ hr.light {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 25%;
+    min-height: 30em;
 }
 .portfolio_div a{
     width: 100%;
@@ -573,10 +575,11 @@ hr.light {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
+    font-size: 24px;
 }
 
 .btn-xl {
-    padding: 15px 30px;
+    padding: 20px 40px;
 }
 
 .top-margin {

@@ -20,7 +20,7 @@ services:
       - EMAIL_LABS_SMTP=${EMAIL_LABS_SMTP}
 
 
-networks:
-  default:
-   external:
-     name: webproxy
+#networks:
+#  default:
+#   external:
+#     name: webproxy

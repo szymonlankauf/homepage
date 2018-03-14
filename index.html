@@ -28,13 +28,13 @@
             <div class="container-fluid">
                 <!--{{ "&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;" | safeHTML }}-->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button id="navButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">page-top</a>
+                    <a id="Top-nav" class="navbar-brand page-scroll" href="#page-top">page-top</a>
                 </div>
                 <!--{{ "&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;" | safeHTML }}-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -76,28 +76,29 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-gears text-primary"></i>
-                        <h3>Fully<br>customizable</h3>
+                        <i class="fa fa-4x fa-cog faa-spin animated text-primary"></i>
+                        <h3>Fully customizable</h3>
                         <p class="text-muted">Make your own website!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-line-chart text-primary"></i>
-                        <h3>Created for Business</h3>
-                        <p class="text-muted">Let your website work for You!</p>
+                        <i class="fa fa-4x fa-heart faa-pulse animated text-primary"></i>
+                        <h3>Created with passion</h3>
+                        <p class="text-muted">Made with love and devotion!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-hand-peace-o text-primary"></i>
+                        <!--<i class="fa fa-4x fa-hand-peace text-primary"></i>-->
+                        <i class="fa fa-hand-peace-o fa-4x faa-tada animated text-primary" aria-hidden="true"></i>
                         <h3>Intuitive and User-Friendly</h3>
                         <p class="text-muted">Keep users interested thanks to our intuitive and user-friendly interface</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary"></i>
+                        <i class="fa fa-4x fa-diamond faa-float animated text-primary"></i>
                         <h3>Stunning and Beautiful</h3>
                         <p class="text-muted">Let your website attract attention and inspire!</p>
                     </div>
@@ -261,7 +262,7 @@
                         <!--<p>Phone number here</p>-->
                     <!--</div>-->
                     <div class="col-lg-12 text-center">
-                        <i class="fa fa-envelope-o fa-3x"></i>
+                        <i class="fa fa-envelope fa-3x"></i>
                         <p><a href="Contact_form.html">Via email</a></p>
                     </div>
                 </div>
@@ -279,7 +280,8 @@
         <!--<script src="js/Nav_scroll.js"></script>-->
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-
+        <!--<script defer src="font-awesome.js"></script>-->
+        <link rel="stylesheet" href="font-awesome-animation.min.css">
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
